@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Start2</title>
+    <script>
+      function alcohol() {
+        var leeftijd = parseInt(document.getElementById("leeftijd").value);
+        console.log(leeftijd);
+        if (leeftijd >= 18) {
+          document.getElementById("18+").innerHTML = "<h2 id='ja'> Ja </h2>";
+        } else if (leeftijd < 0) {
+          document.getElementById("18+").innerHTML =
+            "<h2>Dit is geen geldige leeftijd.</h2>";
+        } else if (leeftijd < 18 || leeftijd >= 0) {
+          document.getElementById("18+").innerHTML = "<h2 id='nee'> Nee </h2>";
+        } else {
+          document.getElementById("18+").innerHTML =
+            "<h2>Vul een leeftijd in.</h2>";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Mag je alcohol kopen?</h1>
+    <input type="button" onclick="alcohol()" value="Leeftijd" />
+    <input type="text" id="leeftijd" />
+    <div id="18+"></div>
+  </body>
+</html>
