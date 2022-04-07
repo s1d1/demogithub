@@ -14,12 +14,12 @@
           document.getElementById("18+").innerHTML = "<h2 id='ja'> Ja </h2>";
         } else if (leeftijd < 0) {
           document.getElementById("18+").innerHTML =
-            "<h2>Dit is geen geldige leeftijd.</h2>";
+            "<h2 id='fout'>Dit is geen geldige leeftijd.</h2>";
         } else if (leeftijd < 18 || leeftijd >= 0) {
           document.getElementById("18+").innerHTML = "<h2 id='nee'> Nee </h2>";
         } else {
           document.getElementById("18+").innerHTML =
-            "<h2>Vul een leeftijd in.</h2>";
+            "<h2 id='fout'>Vul een leeftijd in.</h2>";
         }
       }
     </script>
